@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-image: url("ironman.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 30px;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+h2 {
+  text-align: center;
+}
+
+#Container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#main-event-add-container,
+#btndiv {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  width: 380px;
+  border-radius: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#main-event-add-container:hover,
+#btndiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-image: url("addevent.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#btndiv h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#bttn-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#clear-event-btn {
+  background-image: url("clearall.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#add-sample-event {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#all-events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+#all-events-container div {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+#all-events-container button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4d;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+#all-events-container h4 {
+  margin-bottom: 6px;
+}
+
+#all-events-container span {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+#all-events-container p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  #Container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
